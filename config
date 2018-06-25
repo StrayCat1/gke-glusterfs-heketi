@@ -5,19 +5,18 @@
 # CLOUDSDK_PROJECT_NAME='steven-aldinger'
 # CLOUDSDK_CLUSTER_NAME='development'
 # CLOUDSDK_COMPUTE_ZONE='us-east1-c'
+# GCE_DISK_SIZE=10
 
-CLOUDSDK_PROJECT_NAME=''
-CLOUDSDK_CLUSTER_NAME=''
-CLOUDSDK_COMPUTE_ZONE=''
+
 # ------------------------- [END] required variables ------------------------- #
 
 # ------------------------ [START] optional variables ------------------------ #
 # will default to GKE's default at the time the script is run
-CLUSTER_VERSION=''
+CLUSTER_VERSION='1.10.2-gke.3'
 
 # must be greater than or equal to 3
 # defaults to '3'
-NODE_COUNT=''
+NODE_COUNT='3'
 
 # defaults to 'n1-standard-1'
 MACHINE_TYPE=''
@@ -25,7 +24,7 @@ MACHINE_TYPE=''
 # NOTE: For building and pushing images, the script will use the defaults explained below.
 #       For running the kubernetes job, the script will default to 'stevenaldinger/gke-glusterfs-heketi:latest'
 # defaults to "gcr.io/$CLOUDSDK_PROJECT_NAME"
-DOCKER_REGISTRY=''
+DOCKER_REGISTRY='index.docker.io'
 
 # used if you want to build your own image
 # defaults to 'glusterfs-heketi-bootstrap'

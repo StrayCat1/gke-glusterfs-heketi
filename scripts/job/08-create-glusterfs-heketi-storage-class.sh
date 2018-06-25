@@ -1,4 +1,5 @@
 #!/bin/sh
+gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$ZONE"
 
 external_ip_first_node=$(kubectl get nodes -o jsonpath='{.items[0].status.addresses[?(@.type=="ExternalIP")].address}')
 heketi_nodeport=$(kubectl get svc/heketi -n default -o jsonpath='{.spec.ports[0].nodePort}')

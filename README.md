@@ -1,5 +1,14 @@
 # Hyper-converged GlusterFS and Heketi Dynamic Volume Provisioning on Google Container Engine (GKE)
 
+
+## Grant service account access
+
+```bash
+
+gcloud projects add-iam-policy-binding $CLUSTER_NAME   --member=serviceAccount:user-compute@developer.gserviceaccount.com --role=roles/container.admin
+
+```
+
 ## Usage
 
 1. Edit [config](config) to match your GKE project/zone

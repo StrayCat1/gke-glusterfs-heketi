@@ -12,6 +12,8 @@ echo "      CLOUDSDK_COMPUTE_ZONE: $zone"
 echo "      CLUSTER_VERSION:       $cluster_version"
 echo "      NODE_COUNT:            $node_count"
 echo "      MACHINE_TYPE:          $machine_type"
+echo "      GCE_DISK_SIZE:         $volume_size"
+
 echo ""
 
 # gcloud container --project "$PROJECT_ID" clusters create "$CLUSTER_NAME" --cluster-version "$CLUSTER_VERSION" --quiet \

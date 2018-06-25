@@ -2,7 +2,7 @@
 
 # ----------------- [START] Generate storage network topology ---------------- #
 echo ""
-echo " ========== [START] Enable kernel modules and install glusterfs client ========== "
+echo " ========== [START] Generate storage network topology  ========== "
 echo ""
 
 topology_path="$GLUSTER_HEKETI_BOOTSTRAP_DIR/gluster-kubernetes/deploy/topology.json"

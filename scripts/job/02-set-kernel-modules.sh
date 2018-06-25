@@ -17,6 +17,7 @@
 echo ""
 echo " ========== [START] Enable kernel modules and install glusterfs client ========== "
 echo ""
+gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$ZONE"
 
 for node in $(kubectl get nodes -o name)
 do
@@ -30,6 +31,7 @@ do
     --zone "$ZONE" \
     --command "\
       sudo sh -c '\
+        apt-get install -y software-properties-common  && \
         add-apt-repository -y ppa:gluster/glusterfs-3.12 && \
         apt-get update && \
         apt-get -y install glusterfs-client;

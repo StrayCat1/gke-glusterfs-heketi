@@ -1,4 +1,5 @@
 #!/bin/sh
+gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$ZONE"
 
 heketi_nodeport=$(kubectl get svc/heketi -n default -o jsonpath='{.spec.ports[0].nodePort}')
 

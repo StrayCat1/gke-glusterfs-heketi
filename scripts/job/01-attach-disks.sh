@@ -17,7 +17,7 @@ do
   echo ""
 
   gcloud compute --project "$PROJECT_ID" disks create "disk-$n" \
-    --size '50' \
+    --size "$VOLUME_SIZE" \
     --zone "$ZONE" \
     --description 'gfs-k8s-brick' \
     --type 'pd-ssd'
@@ -27,7 +27,7 @@ do
   n=$(( $n + 1 ))
 
   gcloud compute --project "$PROJECT_ID" disks create "disk-$n" \
-    --size '50' \
+    --size "$VOLUME_SIZE" \
     --zone "$ZONE" \
     --description 'gfs-k8s-brick' \
     --type 'pd-ssd'
@@ -37,7 +37,7 @@ do
   n=$(( $n + 1 ))
 
   gcloud compute --project "$PROJECT_ID" disks create "disk-$n" \
-    --size '50' \
+    --size "$VOLUME_SIZE" \
     --zone "$ZONE" \
     --description 'gfs-k8s-brick' \
     --type 'pd-ssd'

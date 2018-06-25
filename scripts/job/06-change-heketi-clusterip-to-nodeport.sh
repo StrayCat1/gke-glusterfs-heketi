@@ -5,6 +5,7 @@ echo ""
 echo " ============= [START] Generating Heketi node port service ============= "
 echo "    Necessary to avoid i/o timeout during persistent volume claim..."
 echo ""
+gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$ZONE"
 
 heketi_service_yaml_path="$GLUSTER_HEKETI_BOOTSTRAP_DIR/heketi-service.yaml"
 
